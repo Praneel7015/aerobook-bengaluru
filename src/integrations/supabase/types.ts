@@ -14,7 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bookings: {
+        Row: {
+          created_at: string
+          destination_lat: number
+          destination_lng: number
+          distance_km: number
+          estimated_arrival_minutes: number
+          estimated_flight_minutes: number
+          fare: number
+          id: string
+          pickup_lat: number
+          pickup_lng: number
+          pod_id: string
+          status: string
+          tier: string
+          user_contact: string | null
+          user_name: string | null
+        }
+        Insert: {
+          created_at?: string
+          destination_lat: number
+          destination_lng: number
+          distance_km: number
+          estimated_arrival_minutes: number
+          estimated_flight_minutes: number
+          fare: number
+          id?: string
+          pickup_lat: number
+          pickup_lng: number
+          pod_id: string
+          status?: string
+          tier: string
+          user_contact?: string | null
+          user_name?: string | null
+        }
+        Update: {
+          created_at?: string
+          destination_lat?: number
+          destination_lng?: number
+          distance_km?: number
+          estimated_arrival_minutes?: number
+          estimated_flight_minutes?: number
+          fare?: number
+          id?: string
+          pickup_lat?: number
+          pickup_lng?: number
+          pod_id?: string
+          status?: string
+          tier?: string
+          user_contact?: string | null
+          user_name?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
