@@ -176,7 +176,7 @@ export default function Index() {
                     <p className="text-xs text-muted-foreground">min flight</p>
                   </div>
                   <div>
-                    <Zap className="w-5 h-5 mx-auto mb-1 text-green-500" />
+                    <Zap className="w-5 h-5 mx-auto mb-1 text-primary" />
                     <p className="text-2xl font-bold text-primary">
                       ₹{fare?.toFixed(0)}
                     </p>
