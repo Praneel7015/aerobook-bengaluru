@@ -77,7 +77,8 @@ export default function Index() {
       const podId = `POD-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
       const arrivalTime = selectedTierData.waitTime;
 
-      const { data, error } = await supabase.from("bookings").insert({
+      // Insert only: the public can no longer read bookings back (they hold contact details).
+      const { error } = await supabase.from("bookings").insert({
         pickup_lat: pickupLocation.lat,
         pickup_lng: pickupLocation.lng,
         destination_lat: destinationLocation.lat,
@@ -91,7 +92,7 @@ export default function Index() {
         user_name: userName || null,
         user_contact: userContact || null,
         status: "confirmed",
-      }).select().single();
+      });
 
       if (error) throw error;
 
@@ -254,6 +255,21 @@ export default function Index() {
             </Button>
           </div>
         </div>
+
+        <footer className="mt-12 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 pb-2 text-xs text-muted-foreground sm:flex-row">
+          <p>SkyTaxi is a concept demo: no real flights are booked.</p>
+          <p>
+            Made by{" "}
+            <a
+              href="https://praneel.sindhole.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline underline-offset-2 hover:opacity-80"
+            >
+              Praneel S
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );

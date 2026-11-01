@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Source for public/og-image.png: rsvg-convert scripts/og-image.svg -o public/og-image.png -->
+  <defs>
+    <radialGradient id="glow" cx="0.82" cy="0.2" r="0.75"><stop offset="0" stop-color="#3b82f6" stop-opacity="0.55"/><stop offset="1" stop-color="#020817" stop-opacity="0"/></radialGradient>
+    <linearGradient id="route" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#020817"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g fill="#93c5fd" opacity="0.5">
+    <circle cx="140" cy="90" r="2"/><circle cx="380" cy="60" r="1.5"/><circle cx="620" cy="110" r="2"/><circle cx="980" cy="70" r="1.5"/><circle cx="1110" cy="190" r="2"/><circle cx="760" cy="40" r="1.5"/>
+  </g>
+  <path d="M700 520 C 820 360, 940 300, 1090 170" fill="none" stroke="url(#route)" stroke-width="5" stroke-dasharray="14 12" stroke-linecap="round"/>
+  <circle cx="700" cy="520" r="14" fill="#60a5fa"/><circle cx="700" cy="520" r="28" fill="none" stroke="#60a5fa" stroke-opacity="0.4" stroke-width="3"/>
+  <circle cx="1090" cy="170" r="14" fill="#a78bfa"/><circle cx="1090" cy="170" r="28" fill="none" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="3"/>
+  <text x="90" y="250" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800" font-size="104" fill="#f8fafc">SkyTaxi</text>
+  <text x="94" y="320" font-family="Inter, Helvetica, Arial, sans-serif" font-size="38" fill="#bfdbfe">Flying taxi booking for Bengaluru</text>
+  <text x="94" y="380" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" fill="#94a3b8">Pick a route on the map, choose a pod, see the fare.</text>
+  <text x="94" y="560" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#64748b">CONCEPT DEMO</text>
+</svg>
